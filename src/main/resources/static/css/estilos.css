@@ -1,0 +1,19 @@
+/* 
+    Created on : 23 ene 2024, 20:29:09
+    Author     : sebas
+    Esto es un comentario
+*/
+
+#tituloPrincipal{
+    color: cadetblue;
+    font-family: sans-serif;
+}
+
+.parrafoSecundario{
+    color: blueviolet;
+    font-size: 20px;
+}
+
+p{
+    background-color: #88ce5e;
+}
