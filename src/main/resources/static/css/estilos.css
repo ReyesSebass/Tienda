@@ -1,10 +1,4 @@
-/* 
-    Created on : 23 ene 2024, 20:29:09
-    Author     : sebas
-    Esto es un comentario
-*/
-
-#tituloPrincipal{
+#tituloPrincipal {
     color: cadetblue;
     font-family: sans-serif;
 }
@@ -14,6 +8,36 @@
     font-size: 20px;
 }
 
-p{
+/*p{
     background-color: #88ce5e;
+}*/
+
+a:link{
+    color: chocolate;
+}
+
+a:visited{
+    color: darkgreen;
+    background-color: black;
+}
+
+a:hover{
+    transition: 1s;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+}
+
+a:active{
+    background-color: red;
+    color: black;
+}
+
+/*"even son parrafs pares y odd son parrafos inpares"*/
+p:nth-child(even) {
+    background-color: red;
+}
+
+p:nth-child(odd) {
+    background-color: greenyellow;
 }
