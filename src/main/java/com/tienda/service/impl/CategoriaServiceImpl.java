@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class CategoriaServiceImpl implements CategoriaService{
-    
+public class CategoriaServiceImpl implements CategoriaService {
+
     @Autowired
     private CategoriaDao categoriaDao;
 
@@ -41,5 +41,4 @@ public class CategoriaServiceImpl implements CategoriaService{
     public void delete(Categoria categoria) {
         categoriaDao.delete(categoria);
     }
-    
 }
