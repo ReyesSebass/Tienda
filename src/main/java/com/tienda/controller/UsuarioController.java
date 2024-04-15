@@ -39,21 +39,16 @@ public class UsuarioController {
     @PostMapping("/guardar")
     public String usuarioGuardar(Usuario usuario,
             @RequestParam("imagenFile") MultipartFile imagenFile) {
-		
-        boolean nuev0 = true;
-        //Validar si es una creacion o madificacion (Si trae ID)
-        if(usuario.getIdUsuario() != 0){
-            
-        }
+        usuario.setPassword(new BCryptPasswordEncoder().encode(usuario.getPassword()));
         if (!imagenFile.isEmpty()) {
-            usuarioService.save(usuario,false);
+            usuarioService.save(usuario, false);
             usuario.setRutaImagen(
                     firebaseStorageService.cargaImagen(
                             imagenFile,
                             "usuario",
                             usuario.getIdUsuario()));
         }
-        usuarioService.save(usuario,true);
+        usuarioService.save(usuario, true);
         return "redirect:/usuario/listado";
     }
 
